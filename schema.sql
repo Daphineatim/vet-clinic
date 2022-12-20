@@ -59,6 +59,8 @@ CREATE TABLE visits (
 );
 
 -- FIFTH PROJECT 
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
 
 CREATE INDEX audit_visits
 ON visits (animals_id, vets_id);
