@@ -96,3 +96,12 @@ SELECT animals.*, vets.*, visits.visit_date FROM animals JOIN visits ON animals.
 SELECT COUNT(*) FROM specializations RIGHT JOIN vets ON specializations.vets_id = vets.id JOIN visits ON vets.id = visits.vets_id  JOIN animals ON animals.id = visits.animals_id JOIN species ON animals.species_id = species.id WHERE specializations.species_id <> species.id OR specializations.species_id IS NULL;
 
 SELECT species.name, COUNT(*) FROM vets JOIN visits ON vets.id = visits.vets_id JOIN animals ON animals.id = visits.animals_id JOIN species ON animals.species_id = species.id WHERE vets.name='Maisy Smith' GROUP BY species.name ORDER BY count DESC LIMIT 1;
+
+
+-- FITH PROJECT 
+
+explain analyze SELECT COUNT(*) FROM visits where animalS_id = 4
+
+explain analyze SELECT * FROM visits where vetS_id = 2;
+
+explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';
