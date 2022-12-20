@@ -57,3 +57,17 @@ CREATE TABLE visits (
     visit_date date,
     PRIMARY KEY (animals_id, vets_id, visit_date)
 );
+
+-- FIFTH PROJECT 
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+
+CREATE INDEX audit_visits
+ON visits (animals_id, vets_id);
+
+CREATE INDEX vets_1
+ON visits (vets_id);
+
+
+CREATE INDEX email_1
+ON owners (email);
