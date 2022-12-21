@@ -10,7 +10,7 @@ CREATE TABLE invoices (
     total_amount DECIMAL,
     generated_at TIMESTAMP,
     payed_at TIMESTAMP,
-    medical_history_id INT
+    medical_history_id INT 
     PRIMARY KEY (id),
     FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id)
 );
@@ -18,7 +18,7 @@ CREATE TABLE invoices (
 CREATE TABLE medical_histories(
     id INT NOT NULL,
     admitted_at TIMESTAMP,
-    patient_id(id) INT,
+    patient_id(id) INT, 
     status VARCHAR(200),
     PRIMARY KEY (id),
     FOREIGN KEY(patient_id) REFERENCES patients(id)
@@ -49,14 +49,14 @@ CREATE TABLE medical_histories_treatments(
     medical_history_id INT,
     treatment_id INT, 
     PRIMARY KEY(id),
-    FOREIGN KEY(medical_histories_id) REFERENCES medical_histories(id),
-    FOREIGN KEY(treatment_id) REFERENCES treatments(id);
+    FOREIGN KEY(medical_histories_id) REFERENCES medical_histories(id), 
+    FOREIGN KEY(treatment_id) REFERENCES treatments(id); 
 );
 
 -- create indexes
 CREATE INDEX ON medical_histories(patient_id);
 CREATE INDEX ON invoice(medical_history_id);
 CREATE INDEX ON medical_histories_treatments(treatment_id);
-CREATE INDEX ON medical_histories_treatments(medical_histories_id)
-
- 
+CREATE INDEX ON medical_histories_treatments(medical_histories_id);
+CREATE INDEX ON invoice_items(invoice_id);
+CREATE INDEX ON invoice_item(treatmne_id);
