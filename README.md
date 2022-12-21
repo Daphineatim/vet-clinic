@@ -33,6 +33,11 @@ To get a local copy up and running follow these simple example steps.
 -Twitter: @dhaphyn 
 -LinkedIn: DaphineAtim
 
+- GitHub: [@githubhandle](https://github.com/Irirwanirira)
+- Twitter: [@twitterhandle](https://twitter.com/iri_joseph)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/Joseph Irirwanirira)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
